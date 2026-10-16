@@ -1,0 +1,32 @@
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.1s;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn:focus-visible {
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+}
+
+.btn--primary {
+    background-color: #083188;
+    color: #ffffff;
+}
+
+.btn--secondary {
+    background-color: #59595A;
+    color: #ffffff;
+}
+
+.btn--danger {
+    background-color: #7F0404;
+    color: #ffffff;
+}

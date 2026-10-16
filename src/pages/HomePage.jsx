@@ -1,11 +1,14 @@
-import '../styles/Home.css'
+import TaskList from '../components/TaskList'
+import { tasks } from '../data/tasks'
+import '../styles/home.css'
 
-function HomePage() { 
-    return (
-        <main>
-            <h1>Welcome to the Task Manager App</h1>
-        </main>
-    )
+function HomePage() {
+  return (
+    <main>
+      <h1>Task Management Application</h1>
+      <TaskList tasks={tasks} />
+    </main>
+  )
 }
 
 export default HomePage
