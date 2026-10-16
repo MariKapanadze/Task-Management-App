@@ -1,16 +1,62 @@
-# React + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A learning project for managing tasks, built with React JS and Vite.
+This is the initial setup: project structure, Git workflow and a starting page.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React JS
+- Vite
+- npm
+- Git
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js v20.19.6
+- npm 10.8.2
 
-## Expanding the Oxlint configuration
+## Getting started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+1. Clone the repository:
+
+```bash
+   git clone <your-repository-url>
+   cd task-management-app
+```
+
+2. Install dependencies:
+
+```bash
+   npm install
+```
+
+3. Start the development server:
+
+```bash
+   npm run dev
+```
+
+4. Open the app in your browser at http://localhost:5173
+
+## Available scripts
+
+- `npm run dev` starts the development server
+- `npm run build` creates a production build in `dist/`
+- `npm run preview` previews the production build locally
+
+## Project structure
+
+```
+src/
+├── assets/       images, icons, fonts
+├── components/   reusable UI components
+├── data/         static and mock data
+├── pages/        full application pages
+├── services/     API calls and other external logic
+└── styles/       CSS files
+```
+
+## Branches
+
+- `main`: stable, finished code
+- `develop`: active development
