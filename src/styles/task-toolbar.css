@@ -10,3 +10,14 @@
     display: flex;
     gap: 16px;
 }
+
+@media (max-width: 600px) {
+    .task-toolbar {
+        flex-direction: ___;     
+        align-items: stretch;
+    }
+
+    .task-toolbar__filters {
+        flex-direction: column;
+    }
+}
