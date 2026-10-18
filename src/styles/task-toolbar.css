@@ -1,0 +1,12 @@
+.task-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.task-toolbar__filters {
+    display: flex;
+    gap: 16px;
+}
