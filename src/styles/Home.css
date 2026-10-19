@@ -8,3 +8,9 @@
     margin: 0 0 16px;
     font-size: 28px;
 }
+
+.results-count {
+    margin: 0 0 16px;
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
