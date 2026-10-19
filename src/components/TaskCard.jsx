@@ -2,7 +2,7 @@ import Button from './Button'
 import StatusBadge from './StatusBadge'
 import '../styles/task-card.css'
 
-function TaskCard({ task }) {
+function TaskCard({ task, onDelete}) {
   return (
     <article className="task-card">
       <header className="task-card__header">
@@ -27,7 +27,7 @@ function TaskCard({ task }) {
 
       <div className="task-card__actions">
         <Button variant="secondary">Edit</Button>
-        <Button variant="danger">Delete</Button>
+        <Button variant="danger"  onClick={() => onDelete(task.id)}>Delete</Button>
       </div>
     </article>
   )
