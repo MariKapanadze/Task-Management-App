@@ -4,10 +4,9 @@ import TaskList from '../components/TaskList'
 import { tasks } from '../data/tasks'
 import '../styles/home.css'
 
-function HomePage() {
+function TasksPage() {
   return (
     <>
-      <Header />
       <main className="page">
         <h1>Tasks</h1>
         <TaskToolbar />
@@ -17,4 +16,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default TasksPage
