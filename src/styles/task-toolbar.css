@@ -8,12 +8,14 @@
 
 .task-toolbar__filters {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     gap: 16px;
 }
 
 @media (max-width: 600px) {
     .task-toolbar {
-        flex-direction: ___;     
+        flex-direction: row;   
         align-items: stretch;
     }
 

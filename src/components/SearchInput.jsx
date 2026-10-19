@@ -1,11 +1,13 @@
-function SearchInput() {
+function SearchInput({ value, onChange }) {
   return (
     <div className="field">
       <label htmlFor="task-search">Search tasks</label>
       <input
         id="task-search"
         type="search"
-        placeholder="Search by title"
+        placeholder="Type a title..."
+        value={value}
+        onChange={(event) => onChange(event.target.value)}
       />
     </div>
   )
