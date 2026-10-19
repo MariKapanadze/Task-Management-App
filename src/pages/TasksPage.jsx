@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import TaskToolbar from '../components/TaskToolbar'
 import TaskList from '../components/TaskList'
-import { tasks as initialTasks } from '../data/tasks'
-import '../styles/home.css'
 import { filterAndSortTasks } from '../services/taskFilters'
+import '../styles/home.css'
 
-function TasksPage() {
-  const [tasks, setTasks] = useState(initialTasks)
+function TasksPage({ tasks, onDeleteTask, onStatusChange }) {
   const [searchText, setSearchText] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
   const [assigneeFilter, setAssigneeFilter] = useState('all')
@@ -15,25 +13,20 @@ function TasksPage() {
   const assignees = [...new Set(tasks.map((task) => task.assignee))]
 
   const visibleTasks = filterAndSortTasks(tasks, {
-  searchText,
-  statusFilter,
-  assigneeFilter,
-  sortOrder,
+    searchText,
+    statusFilter,
+    assigneeFilter,
+    sortOrder,
   })
 
   const hasActiveFilters =
-  searchText.trim() !== '' || statusFilter !== 'all' || assigneeFilter !== 'all'
+    searchText.trim() !== '' || statusFilter !== 'all' || assigneeFilter !== 'all'
 
   function handleClearFilters() {
     setSearchText('')
     setStatusFilter('all')
     setAssigneeFilter('all')
     setSortOrder('asc')
-  }
-  
-
-  function handleDeleteTask(id) {
-    setTasks(tasks.filter((task) => task.id !== id))
   }
 
   return (
@@ -57,7 +50,8 @@ function TasksPage() {
 
       <TaskList
         tasks={visibleTasks}
-        onDeleteTask={handleDeleteTask}
+        onDeleteTask={onDeleteTask}
+        onStatusChange={onStatusChange} 
         emptyTitle={hasActiveFilters ? 'No tasks match your filters' : 'No tasks yet'}
         emptyMessage={
           hasActiveFilters
