@@ -4,6 +4,7 @@ import AssigneeFilter from './AssigneeFilter'
 import SortSelect from './SortSelect'
 import Button from './Button'
 import '../styles/task-toolbar.css'
+import { useNavigate } from 'react-router-dom'
 
 function TaskToolbar({
   searchText,
@@ -17,6 +18,7 @@ function TaskToolbar({
   assignees,
   onClear,
 }) {
+  const navigate = useNavigate()
   return (
     <section className="task-toolbar" aria-label="Task controls">
       <div className="task-toolbar__filters">
@@ -30,7 +32,7 @@ function TaskToolbar({
         <SortSelect value={sortOrder} onChange={onSortChange} />
         <Button variant="secondary" onClick={onClear}>Clear filters</Button>
       </div>
-      <Button>Add new task</Button>
+     <Button onClick={() => navigate('/tasks/new')}>Add new task</Button>
     </section>
   )
 }
