@@ -10,7 +10,7 @@ function TasksPage() {
       <main className="page">
         <h1>Tasks</h1>
         <TaskToolbar />
-        <TaskList tasks={tasks} />
+        <TaskList tasks={[]} />
       </main>
     </>
   )
